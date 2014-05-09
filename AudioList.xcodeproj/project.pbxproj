@@ -31,6 +31,7 @@
 		1B9BB875191D13E900C0C61C /* ALASong.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB874191D13E900C0C61C /* ALASong.m */; };
 		1B9BB878191D140900C0C61C /* ALAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB877191D140900C0C61C /* ALAArtist.m */; };
 		1B9BB87B191D142300C0C61C /* ALAAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB87A191D142300C0C61C /* ALAAlbum.m */; };
+		1B9BB87E191D1CFC00C0C61C /* ALAALASoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB87D191D1CFC00C0C61C /* ALAALASoundCloudRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		1B9BB877191D140900C0C61C /* ALAArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAArtist.m; sourceTree = "<group>"; };
 		1B9BB879191D142300C0C61C /* ALAAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAAlbum.h; sourceTree = "<group>"; };
 		1B9BB87A191D142300C0C61C /* ALAAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAAlbum.m; sourceTree = "<group>"; };
+		1B9BB87C191D1CFC00C0C61C /* ALAALASoundCloudRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAALASoundCloudRequest.h; sourceTree = "<group>"; };
+		1B9BB87D191D1CFC00C0C61C /* ALAALASoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAALASoundCloudRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +233,8 @@
 		1B9BB86F191D0AF400C0C61C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1B9BB87C191D1CFC00C0C61C /* ALAALASoundCloudRequest.h */,
+				1B9BB87D191D1CFC00C0C61C /* ALAALASoundCloudRequest.m */,
 				1B9BB873191D13E900C0C61C /* ALASong.h */,
 				1B9BB874191D13E900C0C61C /* ALASong.m */,
 				1B9BB876191D140900C0C61C /* ALAArtist.h */,
@@ -340,6 +345,7 @@
 			files = (
 				1B202892191BF26800884562 /* ALAiPadTableViewCell.m in Sources */,
 				1B202860191BB92300884562 /* main.m in Sources */,
+				1B9BB87E191D1CFC00C0C61C /* ALAALASoundCloudRequest.m in Sources */,
 				1B9BB872191D0C3000C0C61C /* ALAiPadDetailViewController.m in Sources */,
 				1B20288C191BF1F100884562 /* ALAiPhoneTableViewController.m in Sources */,
 				1B9BB87B191D142300C0C61C /* ALAAlbum.m in Sources */,

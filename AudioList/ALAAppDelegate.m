@@ -8,6 +8,8 @@
 
 #import "ALAAppDelegate.h"
 #import "ALAiPadViewController.h"
+#import "ALAALASoundCloudRequest.h"
+
 
 @implementation ALAAppDelegate
 
@@ -15,6 +17,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+ 
+  
+    
     
     
     // prebuilt singleton that will id the device.  Launches the proper rootviewcontroller based on the device selected.
@@ -34,6 +39,8 @@
         
         self.window.rootViewController = splitVC;
         
+
+        
     } else {
         
         UITableViewController * tvc = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -41,10 +48,13 @@
         [nc pushViewController:tvc animated:NO];
         
         self.window.rootViewController = nc;
+        
+
     }
  
     
     
+    [ALAALASoundCloudRequest getSongsWithSoundCloud:nil];
 
     
     

@@ -7,7 +7,31 @@
 //
 
 #import "ALAArtist.h"
+#import "ALAALASoundCloudRequest.h"
 
 @implementation ALAArtist
+
+
+-(NSArray *) albumList
+
+{
+    NSMutableArray * albumInfo = [@{} mutableCopy];
+
+//    if(soundCloudProfile[@"playlist"] != nil) userInfo[@"name"] = soundCloudProfile[@"name"];
+
+    
+    
+    
+    return albumInfo;
+
+}
+
+
+
+
+
+
+
+
 
 @end
