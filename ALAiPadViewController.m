@@ -9,6 +9,7 @@
 #import "ALAiPadViewController.h"
 #import "ALAiPadTableViewController.h"
 #import "ALAiPadTableViewCell.h"
+#import "ALAiPadDetailViewController.h"
 
 @interface ALAiPadViewController () <UISplitViewControllerDelegate>
 
@@ -18,8 +19,8 @@
 
 {
 
-    UITableViewController * listVC;
-    UIViewController * detailVC;
+    ALAiPadTableViewController * listVC;
+    ALAiPadDetailViewController * detailVC;
     UINavigationController * nc;
 }
 
@@ -30,12 +31,14 @@
     if (self) {
         // Custom initialization
     
-        detailVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+        detailVC = [[ALAiPadDetailViewController alloc] initWithNibName:nil bundle:nil];
         
         nc = [[UINavigationController alloc] initWithRootViewController:detailVC];
     
 //        listVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
         listVC = [[ALAiPadTableViewController alloc] initWithStyle:UITableViewStylePlain];
+
+        listVC.detailVC = detailVC;
         
         self.viewControllers = @[listVC, nc];
         

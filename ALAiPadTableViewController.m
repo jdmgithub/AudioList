@@ -8,6 +8,7 @@
 
 #import "ALAiPadTableViewController.h"
 #import "ALAiPadTableViewCell.h"
+#import "ALAiPadDetailViewController.h"
 
 
 @interface ALAiPadTableViewController ()

@@ -27,6 +27,10 @@
 		1B202895191BF2AB00884562 /* ALAiPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B202894191BF2AB00884562 /* ALAiPhoneTableViewCell.m */; };
 		1B9BB86D191CF18B00C0C61C /* melodic2_affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BB86B191CF18B00C0C61C /* melodic2_affirm.wav */; };
 		1B9BB86E191CF18B00C0C61C /* DevoAlbumCover.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BB86C191CF18B00C0C61C /* DevoAlbumCover.png */; };
+		1B9BB872191D0C3000C0C61C /* ALAiPadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB871191D0C3000C0C61C /* ALAiPadDetailViewController.m */; };
+		1B9BB875191D13E900C0C61C /* ALASong.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB874191D13E900C0C61C /* ALASong.m */; };
+		1B9BB878191D140900C0C61C /* ALAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB877191D140900C0C61C /* ALAArtist.m */; };
+		1B9BB87B191D142300C0C61C /* ALAAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB87A191D142300C0C61C /* ALAAlbum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,14 @@
 		1B202894191BF2AB00884562 /* ALAiPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPhoneTableViewCell.m; sourceTree = "<group>"; };
 		1B9BB86B191CF18B00C0C61C /* melodic2_affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = melodic2_affirm.wav; sourceTree = "<group>"; };
 		1B9BB86C191CF18B00C0C61C /* DevoAlbumCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DevoAlbumCover.png; sourceTree = "<group>"; };
+		1B9BB870191D0C3000C0C61C /* ALAiPadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAiPadDetailViewController.h; sourceTree = "<group>"; };
+		1B9BB871191D0C3000C0C61C /* ALAiPadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPadDetailViewController.m; sourceTree = "<group>"; };
+		1B9BB873191D13E900C0C61C /* ALASong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASong.h; sourceTree = "<group>"; };
+		1B9BB874191D13E900C0C61C /* ALASong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASong.m; sourceTree = "<group>"; };
+		1B9BB876191D140900C0C61C /* ALAArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAArtist.h; sourceTree = "<group>"; };
+		1B9BB877191D140900C0C61C /* ALAArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAArtist.m; sourceTree = "<group>"; };
+		1B9BB879191D142300C0C61C /* ALAAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAAlbum.h; sourceTree = "<group>"; };
+		1B9BB87A191D142300C0C61C /* ALAAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAAlbum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 			children = (
 				1B202887191BE49900884562 /* ALASingleton.h */,
 				1B202888191BE49900884562 /* ALASingleton.m */,
+				1B9BB86F191D0AF400C0C61C /* Models */,
 				1B9BB868191CF06300C0C61C /* Media */,
 				1B202896191BF31800884562 /* RootView */,
 				1B202885191BC51E00884562 /* iPhone */,
@@ -190,6 +203,8 @@
 				1B202891191BF26800884562 /* ALAiPadTableViewCell.m */,
 				1B20288D191BF23E00884562 /* ALAiPadTableViewController.h */,
 				1B20288E191BF23E00884562 /* ALAiPadTableViewController.m */,
+				1B9BB870191D0C3000C0C61C /* ALAiPadDetailViewController.h */,
+				1B9BB871191D0C3000C0C61C /* ALAiPadDetailViewController.m */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -210,6 +225,19 @@
 				1B9BB86C191CF18B00C0C61C /* DevoAlbumCover.png */,
 			);
 			name = Media;
+			sourceTree = "<group>";
+		};
+		1B9BB86F191D0AF400C0C61C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B9BB873191D13E900C0C61C /* ALASong.h */,
+				1B9BB874191D13E900C0C61C /* ALASong.m */,
+				1B9BB876191D140900C0C61C /* ALAArtist.h */,
+				1B9BB877191D140900C0C61C /* ALAArtist.m */,
+				1B9BB879191D142300C0C61C /* ALAAlbum.h */,
+				1B9BB87A191D142300C0C61C /* ALAAlbum.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +340,14 @@
 			files = (
 				1B202892191BF26800884562 /* ALAiPadTableViewCell.m in Sources */,
 				1B202860191BB92300884562 /* main.m in Sources */,
+				1B9BB872191D0C3000C0C61C /* ALAiPadDetailViewController.m in Sources */,
 				1B20288C191BF1F100884562 /* ALAiPhoneTableViewController.m in Sources */,
+				1B9BB87B191D142300C0C61C /* ALAAlbum.m in Sources */,
 				1B20288F191BF23E00884562 /* ALAiPadTableViewController.m in Sources */,
+				1B9BB875191D13E900C0C61C /* ALASong.m in Sources */,
 				1B202864191BB92300884562 /* ALAAppDelegate.m in Sources */,
 				1B202889191BE49900884562 /* ALASingleton.m in Sources */,
+				1B9BB878191D140900C0C61C /* ALAArtist.m in Sources */,
 				1B202884191BC51100884562 /* ALAiPadViewController.m in Sources */,
 				1B202895191BF2AB00884562 /* ALAiPhoneTableViewCell.m in Sources */,
 			);
