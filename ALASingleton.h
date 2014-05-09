@@ -12,16 +12,17 @@
 
 +(ALASingleton *)mainData;
 
-//@property (nonatomic) NSArray * cellData;
-//
-//-(NSDictionary *)allCellData;
 
-//
-//-(void)addListItem:(NSDictionary *)listItem;
-//-(void)removeListItem:(NSDictionary *)listItem;
-//-(void)removeListItemAtIndex:(NSInteger)index;
-//-(NSArray *)allListItems;
+@property (nonatomic) NSMutableArray * albumList;
 
+@property (nonatomic) NSMutableDictionary * albumInfo;
+
+@property (nonatomic) NSInteger likesUpdate;
+
+@property (nonatomic) NSInteger dislikesUpdate;
+
+-(NSMutableArray *)allAlbumLists;
+-(NSMutableDictionary *)allAlbumInfo;
 
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ALASingleton.h"
+#import "ALAALASoundCloudRequest.h"
 
 @interface ALASingleton ()
 @property (nonatomic) NSMutableArray * listItems;
@@ -31,6 +32,70 @@
     return singleton;
     
 }
+
+-(NSMutableArray *)allAlbumLists
+{
+    return [self.albumList copy];
+
+}
+
+
+-(NSMutableArray *)albumList
+
+{
+    NSLog(@"%@ Singleton Request", [ALAALASoundCloudRequest getSongsWithSoundCloud:nil]);
+          
+    _albumList = [@
+                  [@{
+                     @"title" : @"Here Comes The Bomb",
+                     @"image" : @"Here_Comes_The_Bomb",
+                     @"timesPlayed" : @"500",
+                     
+                     
+                     }]mutableCopy];
+                  
+    return _albumList;
+                  
+
+}
+
+
+-(NSMutableDictionary *)albumInfo
+
+{
+    _albumInfo = [@{}mutableCopy];
+    return _albumInfo;
+    
+}
+
+-(NSMutableDictionary *)allAlbumInfo
+
+{
+
+    return [self.albumInfo copy];
+}
+
+
+//
+//-(NSMutableArray *)allAlbumLists;
+//
+//{
+//
+//    NSLog(@"Singleton JSON %@", [ALAALASoundCloudRequest getSongsWithSoundCloud]);
+//
+//    
+//    return _albumList;
+//}
+//
+//-(NSMutableDictionary *)allAlbumInfo;
+//
+//{
+//
+//    _albumList = [@{}];
+//    
+//}
+
+
 
 //-(id)init
 //
@@ -132,12 +197,6 @@
 //    
 //}
 //
-
-
-
-
-
-
 
 
 

@@ -7,17 +7,25 @@
 //
 
 #import "ALAALASoundCloudRequest.h"
+#import "ALASingleton.h"
+#import "ALASong.h"
+#import "ALAArtist.h"
+#import "ALAAlbum.h"
 
 @implementation ALAALASoundCloudRequest
 
+{
+    NSMutableArray * playList;
 
+}
 
 
 + (NSDictionary *)getSongsWithSoundCloud:(NSString *)songInfo;
 {
 //    NSMutableDictionary * artistInfo = [@{} mutableCopy];
     
-    NSString * soundCloud = [NSString stringWithFormat:@"http://api.soundcloud.com/playlists/4252210.json?client_id=65db70dfcdaab4cf033f9a4003a341e1"];
+    NSString * soundCloud = [NSString stringWithFormat:@"https://api.soundcloud.com/users/user745166732/playlists.json?client_id=b3fd07bad6454d624feb6f5b306d46f4"];
+    
     
     
     NSURL * url = [NSURL URLWithString:soundCloud];
@@ -32,10 +40,23 @@
     NSError * jsonError = nil;
 
     
-    NSDictionary * soundCloudProfile = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+    NSArray * soundCloudProfile = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
     
 
     NSLog(@" %@", soundCloudProfile);
+    
+    
+    for (NSDictionary * playList in soundCloudProfile) {
+        NSArray * tracks = playList[@"tracks"];
+        
+        for (NSDictionary * track in tracks) {
+            NSLog(@"%@", track[@"title"]);
+        }
+    }
+    
+    
+    
+    
     
     
 //    if(soundCloudProfile[@"playlist"] != nil) userInfo[@"name"] = soundCloudProfile[@"name"];
@@ -48,6 +69,10 @@
     return soundCloudProfile;
 
 }
+
+
+
+
 
 
 
