@@ -23,6 +23,7 @@
     ALAiPadTableViewController * listVC;
     ALAiPadDetailViewController * detailVC;
     UINavigationController * nc;
+    UITableViewController * songVC;
 }
 
 
@@ -45,9 +46,16 @@
 //        listVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
         listVC = [[ALAiPadTableViewController alloc] initWithStyle:UITableViewStylePlain];
 
+        
+        songVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+        
+        UITabBarController * tabBar = [[UITabBarController alloc] init];
+        
+        [tabBar setViewControllers:@[listVC, songVC]];
+        
         listVC.detailVC = detailVC;
         
-        self.viewControllers = @[listVC, nc];
+        self.viewControllers = @[tabBar, nc];
         
         self.presentsWithGesture = YES;
      
@@ -70,8 +78,8 @@
 //    detailVC.navigationController.navigationBarHidden = NO;
     nc.navigationBarHidden = NO;
     
-    
 }
+
 
 
 -(void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
@@ -80,7 +88,6 @@
 
     nc.navigationBarHidden = YES;
 
-    
 }
 
 
