@@ -13,7 +13,6 @@
 @interface ALAAlbum : NSDictionary
 
 @property (nonatomic) ALAArtist * artist;
-
 @property (nonatomic) NSArray * songList;
 
 @end

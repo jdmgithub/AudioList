@@ -48,9 +48,24 @@
     
     for (NSDictionary * playList in soundCloudProfile) {
         NSArray * tracks = playList[@"tracks"];
+            NSLog(@"Tracks %@", playList[@"tracks"]);
+        
+
         
         for (NSDictionary * track in tracks) {
-            NSLog(@"%@", track[@"title"]);
+            NSLog(@"Track %@", track[@"title"]);
+
+
+//        for (NSDictionary * artist in tracks) {
+//            NSLog(@"Artist / User %@", artist[@"user"]);
+//            
+//    
+//        for (NSDictionary * albumList in playList) {
+//            NSLog(@"Album Lists %@", albumList[@"playlist"]);
+//            }
+//        
+//            }
+        
         }
     }
     
