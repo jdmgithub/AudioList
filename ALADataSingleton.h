@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ALATrack.h"
+#import "ALAUser.h"
+#import "ALAPLaylist.h"
 
 @interface ALADataSingleton : NSObject
 
@@ -16,6 +18,14 @@
 
 -(void)addNewTrack:(ALATrack *)track;
 -(NSArray *)allTracks;
+
+
+-(void)addNewUser:(ALAUser *)user;
+-(NSArray *)allUsers;
+
+-(void)addNewPlaylist:(ALAPLaylist *)playlist;
+-(NSArray *)allPlaylists;
+
 
 
 

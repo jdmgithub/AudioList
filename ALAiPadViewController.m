@@ -35,7 +35,13 @@
         detailVC = [[ALAiPadDetailViewController alloc] initWithNibName:nil bundle:nil];
         
         nc = [[UINavigationController alloc] initWithRootViewController:detailVC];
-    
+
+        
+        // list vc:  tabbar at bottom with tracks * playlist buttons.  click should display the proper one.
+        // clicking playlist should display the playList; i.e. push view controller
+        // on right side (detail view) add a play and a stop button.  To play music from stream url; avfoundation
+        
+        
 //        listVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
         listVC = [[ALAiPadTableViewController alloc] initWithStyle:UITableViewStylePlain];
 

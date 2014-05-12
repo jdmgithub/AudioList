@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0E2D0B1921391700B07DB8 /* ALADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E2D0A1921391700B07DB8 /* ALADictionary.m */; };
 		1B202854191BB92300884562 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B202853191BB92300884562 /* Foundation.framework */; };
 		1B202856191BB92300884562 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B202855191BB92300884562 /* CoreGraphics.framework */; };
 		1B202858191BB92300884562 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B202857191BB92300884562 /* UIKit.framework */; };
@@ -29,8 +30,8 @@
 		1B9BB86E191CF18B00C0C61C /* DevoAlbumCover.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B9BB86C191CF18B00C0C61C /* DevoAlbumCover.png */; };
 		1B9BB872191D0C3000C0C61C /* ALAiPadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB871191D0C3000C0C61C /* ALAiPadDetailViewController.m */; };
 		1B9BB875191D13E900C0C61C /* ALATrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB874191D13E900C0C61C /* ALATrack.m */; };
-		1B9BB878191D140900C0C61C /* ALAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB877191D140900C0C61C /* ALAArtist.m */; };
-		1B9BB87B191D142300C0C61C /* ALAAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB87A191D142300C0C61C /* ALAAlbum.m */; };
+		1B9BB878191D140900C0C61C /* ALAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB877191D140900C0C61C /* ALAUser.m */; };
+		1B9BB87B191D142300C0C61C /* ALAPLaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB87A191D142300C0C61C /* ALAPLaylist.m */; };
 		1B9BB87E191D1CFC00C0C61C /* ALASoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BB87D191D1CFC00C0C61C /* ALASoundCloudRequest.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0E2D091921391700B07DB8 /* ALADictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALADictionary.h; sourceTree = "<group>"; };
+		1B0E2D0A1921391700B07DB8 /* ALADictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALADictionary.m; sourceTree = "<group>"; };
 		1B202850191BB92300884562 /* AudioList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B202853191BB92300884562 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B202855191BB92300884562 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,10 +82,10 @@
 		1B9BB871191D0C3000C0C61C /* ALAiPadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPadDetailViewController.m; sourceTree = "<group>"; };
 		1B9BB873191D13E900C0C61C /* ALATrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALATrack.h; sourceTree = "<group>"; };
 		1B9BB874191D13E900C0C61C /* ALATrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALATrack.m; sourceTree = "<group>"; };
-		1B9BB876191D140900C0C61C /* ALAArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAArtist.h; sourceTree = "<group>"; };
-		1B9BB877191D140900C0C61C /* ALAArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAArtist.m; sourceTree = "<group>"; };
-		1B9BB879191D142300C0C61C /* ALAAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAAlbum.h; sourceTree = "<group>"; };
-		1B9BB87A191D142300C0C61C /* ALAAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAAlbum.m; sourceTree = "<group>"; };
+		1B9BB876191D140900C0C61C /* ALAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAUser.h; sourceTree = "<group>"; };
+		1B9BB877191D140900C0C61C /* ALAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAUser.m; sourceTree = "<group>"; };
+		1B9BB879191D142300C0C61C /* ALAPLaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAPLaylist.h; sourceTree = "<group>"; };
+		1B9BB87A191D142300C0C61C /* ALAPLaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAPLaylist.m; sourceTree = "<group>"; };
 		1B9BB87C191D1CFC00C0C61C /* ALASoundCloudRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASoundCloudRequest.h; sourceTree = "<group>"; };
 		1B9BB87D191D1CFC00C0C61C /* ALASoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASoundCloudRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,10 +119,12 @@
 			children = (
 				1B9BB873191D13E900C0C61C /* ALATrack.h */,
 				1B9BB874191D13E900C0C61C /* ALATrack.m */,
-				1B9BB876191D140900C0C61C /* ALAArtist.h */,
-				1B9BB877191D140900C0C61C /* ALAArtist.m */,
-				1B9BB879191D142300C0C61C /* ALAAlbum.h */,
-				1B9BB87A191D142300C0C61C /* ALAAlbum.m */,
+				1B9BB876191D140900C0C61C /* ALAUser.h */,
+				1B9BB877191D140900C0C61C /* ALAUser.m */,
+				1B9BB879191D142300C0C61C /* ALAPLaylist.h */,
+				1B9BB87A191D142300C0C61C /* ALAPLaylist.m */,
+				1B0E2D091921391700B07DB8 /* ALADictionary.h */,
+				1B0E2D0A1921391700B07DB8 /* ALADictionary.m */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -364,12 +369,13 @@
 				1B9BB87E191D1CFC00C0C61C /* ALASoundCloudRequest.m in Sources */,
 				1B9BB872191D0C3000C0C61C /* ALAiPadDetailViewController.m in Sources */,
 				1B20288C191BF1F100884562 /* ALAiPhoneTableViewController.m in Sources */,
-				1B9BB87B191D142300C0C61C /* ALAAlbum.m in Sources */,
+				1B9BB87B191D142300C0C61C /* ALAPLaylist.m in Sources */,
 				1B20288F191BF23E00884562 /* ALAiPadTableViewController.m in Sources */,
 				1B9BB875191D13E900C0C61C /* ALATrack.m in Sources */,
 				1B202864191BB92300884562 /* ALAAppDelegate.m in Sources */,
 				1B202889191BE49900884562 /* ALADataSingleton.m in Sources */,
-				1B9BB878191D140900C0C61C /* ALAArtist.m in Sources */,
+				1B0E2D0B1921391700B07DB8 /* ALADictionary.m in Sources */,
+				1B9BB878191D140900C0C61C /* ALAUser.m in Sources */,
 				1B202884191BC51100884562 /* ALAiPadViewController.m in Sources */,
 				1B202895191BF2AB00884562 /* ALAiPhoneTableViewCell.m in Sources */,
 			);

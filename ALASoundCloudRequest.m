@@ -9,8 +9,8 @@
 #import "ALASoundCloudRequest.h"
 #import "ALADataSingleton.h"
 //#import "ALATrack.h"
-#import "ALAArtist.h"
-#import "ALAAlbum.h"
+#import "ALAUser.h"
+#import "ALAPLaylist.h"
 
 
 #define CLIENT_ID @"client_id=b3fd07bad6454d624feb6f5b306d46f4"
@@ -31,6 +31,7 @@
 {
 // identifies the url that will have the request sent to to.  Done via string.
     NSURL * requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/users/%@/playlists.json?%@", SC_API, USER_NAME, CLIENT_ID]];
+
 // request object -- explanation of what the request will do
     NSURLRequest * request = [NSURLRequest requestWithURL:requestURL];
 
@@ -51,7 +52,15 @@
         for (NSDictionary * playlist in scInfo)
         {
             
-            // create new playlist and set things like playlist Title
+            ALAPLaylist * playlistTwo = [ALAPLaylist newPlaylist];
+            
+            playlistTwo[@"title"] = playlist[@"title"];
+
+//            NSLog(@"Playlist :  %@", playlistTwo);
+            
+
+            
+            [[ALADataSingleton mainData] addNewPlaylist:playlistTwo];
             
             for (NSDictionary * trackInfo in playlist[@"tracks"])
             {
@@ -61,17 +70,43 @@
                 
                 ALATrack * track = [ALATrack newTrack];
                 
-                track[@"title"] = trackInfo[@"title"];    // does not work unless a subclass dictionary.
-//   or             [track setObject:trackInfo[@"title"] forKey:@"title"];
-      
+                track.playList = playlistTwo;
+                
+                track[@"title"] = trackInfo[@"title"];
+//                        or
+//                [track setObject:trackInfo[@"title"] forKey:@"title"];
+
+                
                 track[@"url"] = trackInfo[@"stream_url"];
              
+                [playlistTwo.tracks addObject:track];
+                
                 [[ALADataSingleton mainData] addNewTrack:track];
+        
+                 
+
+            NSDictionary * userInfo = playlist[@"user"];
+
+                ALAUser * user = [ALAUser newUser];
+                
+                user[@"user"] = userInfo[@"username"];
+                
+//                NSLog(@"User Info :  %@", userInfo);
+            
+                track.user = user;
+
+                [[ALADataSingleton mainData] addNewUser:user];
+            
+
+
             }
+            
+            
+            
             
         }
         
-        NSLog(@"%@", [[ALADataSingleton mainData] allTracks]);
+        NSLog(@"%@", [[ALADataSingleton mainData] allUsers]);
 
         NSNotificationCenter * nCenter = [NSNotificationCenter defaultCenter];
         

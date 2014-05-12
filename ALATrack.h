@@ -7,30 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class ALAArtist;
-@class ALAAlbum;
+#import "ALADictionary.h"
 
 
-@interface ALATrack : NSMutableDictionary
+@class ALAUser;
+@class ALAPLaylist;
+
+
+@interface ALATrack : ALADictionary
 
 +(id)newTrack;
 
-
-
-
-//-(id)objectForKey:(id)aKey;
-//
-//-(void)setObject:(id)anObject forKey:(id<NSCopying>)aKey;
-//
-//-(void)removeObjectForKey:(id)aKey;
-
-
-
-
-
-@property (nonatomic) ALAArtist * artist;
-@property (nonatomic) ALAAlbum * album;
+@property (nonatomic) ALAUser * user;
+@property (nonatomic) ALAPLaylist * playList;
 
 
 @end

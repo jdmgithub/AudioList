@@ -19,6 +19,10 @@
 
 {
     NSMutableArray * tracks;
+    
+    NSMutableArray * users;
+    
+    NSMutableArray * playList;
 
 }
 
@@ -44,6 +48,8 @@
     if(self)
     {
         tracks = [@[] mutableCopy];
+        users = [@[] mutableCopy];
+        playList = [@[] mutableCopy];
     
     }
     return self;
@@ -64,6 +70,53 @@
 }
 
 
+-(NSArray *)allUsers
+
+{
+    return [users copy];
+
+}
+
+
+-(void)addNewUser:(ALAUser *)user
+
+{
+    [users addObject:user];
+    
+}
+
+
+
+
+
+
+-(void)addNewPlaylist:(ALAPLaylist *)playlist
+
+{
+    [playList addObject:playlist];
+
+}
+
+
+
+-(NSArray *)allPlaylists
+
+{
+    return [playList copy];
+    
+}
+
+
+
+
+
+
+//-(NSDictionary *)newUser
+//
+//{
+//    
+//
+//}
 
 
 
