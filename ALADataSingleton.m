@@ -6,74 +6,110 @@
 //  Copyright (c) 2014 Jeffery Moulds. All rights reserved.
 //
 
-#import "ALASingleton.h"
-#import "ALAALASoundCloudRequest.h"
+#import "ALADataSingleton.h"
+#import "ALASoundCloudRequest.h"
 
-@interface ALASingleton ()
+@interface ALADataSingleton ()
 @property (nonatomic) NSMutableArray * listItems;
 
 @end
 
 
-@implementation ALASingleton
+@implementation ALADataSingleton
+
+{
+    NSMutableArray * tracks;
+
+}
 
 
-
-
-+(ALASingleton *)mainData
++(ALADataSingleton *)mainData
 {
     static dispatch_once_t create;
-    static ALASingleton * singleton = nil;
+    static ALADataSingleton * singleton = nil;
     
     dispatch_once(&create, ^{
-        singleton = [[ALASingleton alloc] init];
+        singleton = [[ALADataSingleton alloc] init];
     });
     
     return singleton;
     
 }
 
--(NSMutableArray *)allAlbumLists
-{
-    return [self.albumList copy];
 
-}
-
-
--(NSMutableArray *)albumList
+-(id)init
 
 {
-    NSLog(@"%@ Singleton Request", [ALAALASoundCloudRequest getSongsWithSoundCloud:nil]);
-          
-    _albumList = [@
-                  [@{
-                     @"title" : @"Here Comes The Bomb",
-                     @"image" : @"Here_Comes_The_Bomb",
-                     @"timesPlayed" : @"500",
-                     
-                     
-                     }]mutableCopy];
-                  
-    return _albumList;
-                  
-
-}
-
-
--(NSMutableDictionary *)albumInfo
-
-{
-    _albumInfo = [@{}mutableCopy];
-    return _albumInfo;
+    self = [super init];
+    if(self)
+    {
+        tracks = [@[] mutableCopy];
     
+    }
+    return self;
 }
 
--(NSMutableDictionary *)allAlbumInfo
 
+
+-(void)addNewTrack:(ALATrack *)track;
 {
-
-    return [self.albumInfo copy];
+    [tracks addObject:track];
 }
+
+
+-(NSArray *)allTracks;
+{
+    return [tracks copy];
+
+}
+
+
+
+
+
+//
+//
+//-(NSMutableArray *)allAlbumLists
+//{
+//    return [self.albumList copy];
+//
+//}
+//
+//
+//-(NSMutableArray *)albumList
+//
+//{
+////    NSLog(@"%@ Singleton Request", [ALASoundCloudRequest getSongsWithSoundCloud:nil]);
+//          
+//    _albumList = [@
+//                  [@{
+//                     @"title" : @"Here Comes The Bomb",
+//                     @"image" : @"Here_Comes_The_Bomb",
+//                     @"timesPlayed" : @"500",
+//                     
+//                     
+//                     }]mutableCopy];
+//                  
+//    return _albumList;
+//                  
+//
+//}
+//
+//
+//-(NSMutableDictionary *)albumInfo
+//
+//{
+//    _albumInfo = [@{}mutableCopy];
+//    return _albumInfo;
+//    
+//}
+//
+//-(NSMutableDictionary *)allAlbumInfo
+//
+//{
+//
+//    return [self.albumInfo copy];
+//}
 
 
 //

@@ -8,7 +8,7 @@
 
 #import "ALAAppDelegate.h"
 #import "ALAiPadViewController.h"
-#import "ALAALASoundCloudRequest.h"
+#import "ALASoundCloudRequest.h"
 
 
 @implementation ALAAppDelegate
@@ -54,7 +54,7 @@
  
     
     
-    [ALAALASoundCloudRequest getSongsWithSoundCloud:nil];
+//    [ALASoundCloudRequest getSongsWithSoundCloud:nil];
 
     
     

@@ -10,6 +10,7 @@
 #import "ALAiPadTableViewController.h"
 #import "ALAiPadTableViewCell.h"
 #import "ALAiPadDetailViewController.h"
+#import "ALASoundCloudRequest.h"
 
 @interface ALAiPadViewController () <UISplitViewControllerDelegate>
 
@@ -45,6 +46,8 @@
         self.presentsWithGesture = YES;
      
         self.delegate = self;
+     
+        [ALASoundCloudRequest updateData];
         
     }
     return self;

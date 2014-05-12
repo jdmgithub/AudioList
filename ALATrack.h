@@ -12,7 +12,22 @@
 @class ALAAlbum;
 
 
-@interface ALASong : NSDictionary
+@interface ALATrack : NSMutableDictionary
+
++(id)newTrack;
+
+
+
+
+//-(id)objectForKey:(id)aKey;
+//
+//-(void)setObject:(id)anObject forKey:(id<NSCopying>)aKey;
+//
+//-(void)removeObjectForKey:(id)aKey;
+
+
+
+
 
 @property (nonatomic) ALAArtist * artist;
 @property (nonatomic) ALAAlbum * album;

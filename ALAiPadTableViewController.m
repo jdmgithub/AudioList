@@ -10,6 +10,8 @@
 #import "ALAiPadTableViewCell.h"
 #import "ALAiPadDetailViewController.h"
 
+#import "ALADataSingleton.h"
+
 
 @interface ALAiPadTableViewController ()
 
@@ -23,7 +25,22 @@
     if (self) {
         // Custom initialization
 
-        self.tableView.rowHeight = 100;
+        
+        NSNotificationCenter * nCenter = [NSNotificationCenter defaultCenter];
+        
+        [nCenter addObserverForName:@"dataUpdated" object:nil queue:nil usingBlock:^(NSNotification *note) {
+
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.tableView reloadData];
+                
+            });
+    
+        }];
+        
+        
+//        self.tableView.rowHeight = 100;
 
     
     }
@@ -55,23 +72,40 @@
 //    return 0;
 //}
 
+
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-//    return [[[TDLSingleton sharedCollection]allListItems] count];
-    return 3;
+    
+    return [[[ALADataSingleton mainData] allTracks] count];
+    
 }
+
+
+
+
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ALAiPadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    ALAiPadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+
     
-    if (cell == nil) cell = [[ALAiPadTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    if (cell == nil) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
-    cell.index = indexPath.row;
+  
+    ALATrack * track = [[ALADataSingleton mainData] allTracks][indexPath.row];
+
+    cell.textLabel.text = track[@"title"];
     
     return cell;
+
+    
 }
 
 

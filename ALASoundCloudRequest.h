@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ALAALASoundCloudRequest : NSObject
+@interface ALASoundCloudRequest : NSObject
 
-+ (NSDictionary *)getSongsWithSoundCloud:(NSString *)songInfo;
+//+ (NSDictionary *)getSongsWithSoundCloud:(NSString *)songInfo;
+
++(void)updateData;
 
 
 @end

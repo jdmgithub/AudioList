@@ -7,7 +7,7 @@
 //
 
 #import "ALAArtist.h"
-#import "ALAALASoundCloudRequest.h"
+#import "ALASoundCloudRequest.h"
 
 @implementation ALAArtist
 

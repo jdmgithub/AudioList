@@ -8,7 +8,7 @@
 
 #import "ALAiPhoneTableViewController.h"
 #import "ALAiPhoneTableViewCell.h"
-#import "ALASingleton.h"
+#import "ALADataSingleton.h"
 
 @interface ALAiPhoneTableViewController ()
 
@@ -28,7 +28,19 @@
     if (self) {
         // Custom initialization
         
-        self.tableView.rowHeight = 100;
+        
+        // observer listening to be fired
+//        NSNotificationCenter * nCenter = [NSNotificationCenter defaultCenter];
+//        
+//        [nCenter addObserverForName:@"dataUpdated" object:nil queue:nil usingBlock:^(NSNotification *note) {
+//
+//            
+//        [self.tableView reloadData];
+//            
+//        }];
+        
+        
+//        self.tableView.rowHeight = 100;
 
         
         
