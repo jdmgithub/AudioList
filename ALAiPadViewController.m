@@ -14,6 +14,7 @@
 
 @interface ALAiPadViewController () <UISplitViewControllerDelegate>
 
+
 @end
 
 @implementation ALAiPadViewController
@@ -24,6 +25,10 @@
     ALAiPadDetailViewController * detailVC;
     UINavigationController * nc;
     UITableViewController * songVC;
+    UITableViewController * playlistVC;
+//    NSArray * tabControllers;
+
+    
 }
 
 
@@ -40,7 +45,7 @@
         
         // list vc:  tabbar at bottom with tracks * playlist buttons.  click should display the proper one.
         // clicking playlist should display the playList; i.e. push view controller
-        // on right side (detail view) add a play and a stop button.  To play music from stream url; avfoundation
+        // on right side (detail view) add a play and a stopr button.  To play music from stream url; avfoundation
         
         
 //        listVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -49,7 +54,19 @@
         
         songVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
         
+        
         UITabBarController * tabBar = [[UITabBarController alloc] init];
+        
+        tabBar.tabBar.barTintColor = [UIColor blackColor];
+        
+        playlistVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+
+        
+        UITabBarItem * songsTabButton = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:0];
+        
+
+
+        
         
         [tabBar setViewControllers:@[listVC, songVC]];
         
@@ -89,6 +106,10 @@
     nc.navigationBarHidden = YES;
 
 }
+
+
+
+
 
 
 - (void)viewDidLoad
