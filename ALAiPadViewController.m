@@ -55,18 +55,21 @@
         songVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
         
         
+//        playlistVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+
+        
         UITabBarController * tabBar = [[UITabBarController alloc] init];
         
         tabBar.tabBar.barTintColor = [UIColor blackColor];
-        
-        playlistVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
 
         
-        UITabBarItem * songsTabButton = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:0];
+//        UITabBarItem * songsTabButton = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:0];
+//
+//        [tabBar.view addSubview:songsTabButton];
         
-
-
-        
+        songVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Songs" image:nil tag:0];
+        listVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Playlist" image:nil tag:1];
+    
         
         [tabBar setViewControllers:@[listVC, songVC]];
         
